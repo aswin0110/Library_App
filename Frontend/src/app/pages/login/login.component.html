@@ -1,0 +1,44 @@
+
+<!-- <h3 class="mt-5 pt-5 text-center">LOGIN FORM</h3> -->
+
+<div>
+    <div class="row justify-content-md-center mt-5 pt-5">
+      <div class="col">
+      </div>
+      <div class="col-6">
+        
+    <!-- <form class="" #loginform="ngForm" >
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Email address</label>
+            <input  type="email" class="form-control" name="email" [(ngModel)]="User.email" required pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$" #email="ngModel" [class.is-invalid]="email.touched&&email.invalid">
+            <span class="text-danger" [class.d-none]="email.touched||email.valid">Email is error</span>
+          </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Password</label>
+            <input type="password" class="form-control"  name="password" [(ngModel)]="User.password" required minlength="8" #password="ngModel" [class.is-invalid]="password.touched&&password.invalid">
+            <span class="text-danger" [class.d-none]="password.touched||password.valid">password is error</span>
+        </div>
+        <h6>Create an account </h6> <a routerLink="/signup"><h6>Signup</h6></a><br>
+        <button type="submit" (click)="login()" class="btn btn-primary" [disabled]="loginform.form.invalid">Submit</button>
+        
+        </form> -->
+
+        <form [formGroup]="User">
+          <div class="form-group">
+          <label for="exampleInputEmail1">Email address</label>
+          <input type="email" class="form-control" formControlName="email">
+          </div>
+
+          <div class="form-group">
+          <label for="exampleInputPassword1">Password</label>
+          <input type="password" class="form-control" formControlName="password">
+          </div>
+          <button type="submit" class="btn btn-primary" (click)="login()">Submit</button>
+      </form>
+
+
+      </div>
+      <div class="col">
+      </div>
+    </div>
+

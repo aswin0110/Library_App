@@ -1,0 +1,37 @@
+<div class="container ">
+    <!-- <div class="row d-flex">
+        <div class="col-6">
+            <div class="card" *ngFor="let book of modelBook, let i = index" style="width: 18rem;">
+                <img  src="https://pyxis.nymag.com/v1/imgs/1cc/b68/6613f73d72328f430c6e55e3de5d3acccf-24-parenting-books-1.rsquare.w700.jpg" class="card-img-top" >
+                <div class="card-body">
+                <h5 class="card-title">{{book.title}}</h5>
+                <p class="card-text">{{book.auther}}</p>
+                <p class="card-text">{{book.content}}</p>
+                <a href="" class="btn btn-primary">Read</a>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Title</th>
+            <th scope="col">Author</th>
+            <th scope="col">Content</th>
+            <th scope="col">Delete</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let book of modelBook, let i = index">
+            <th scope="row">{{i+1}}</th>
+            <td>{{book.title}}</td>
+            <td>{{book.auther}}</td>
+            <td (click)="deleteBook(book._id)"><i class="bi bi-trash3-fill text-danger"></i></td>
+          </tr>
+          
+        </tbody>
+      </table>
+    
+</div>
